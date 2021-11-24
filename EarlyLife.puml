@@ -1,0 +1,84 @@
+@startuml
+class com.example.earlylife.RadarChartActivity {
+# void onCreate(Bundle)
+}
+class com.example.earlylife.ActivitiesFragment {
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
++ {static} ActivitiesFragment newInstance(String,String)
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void onClick(View)
+}
+class com.example.earlylife.NumbersActivity {
+# void onCreate(Bundle)
+}
+class com.example.earlylife.StatisticsFragment {
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
++ {static} StatisticsFragment newInstance(String,String)
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void onClick(View)
+}
+class com.example.earlylife.TabbedActivity {
+~ TabLayout tabLayout
+~ ViewPager2 pager2
+~ FragmentAdapter adapter
+# void onCreate(Bundle)
+}
+class com.example.earlylife.PieChartActivity {
+# void onCreate(Bundle)
+}
+class com.example.earlylife.MainActivity {
+# void onCreate(Bundle)
+- boolean isConnected(MainActivity)
++ void showCustomDialog()
+}
+class com.example.earlylife.BarChartActivity {
+# void onCreate(Bundle)
+}
+class com.example.earlylife.HelpFragment {
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
++ {static} HelpFragment newInstance(String,String)
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+}
+class com.example.earlylife.ShapesActivity {
+# void onCreate(Bundle)
+}
+class com.example.earlylife.FragmentAdapter {
++ Fragment createFragment(int)
++ int getItemCount()
+}
+class com.example.earlylife.LoveActivity {
+# void onCreate(Bundle)
+}
+class com.example.earlylife.MiscActivity {
+# void onCreate(Bundle)
+}
+
+
+androidx.appcompat.app.AppCompatActivity <|-- com.example.earlylife.RadarChartActivity
+com.example.earlylife.OnClickListener <|.. com.example.earlylife.ActivitiesFragment
+androidx.fragment.app.Fragment <|-- com.example.earlylife.ActivitiesFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.example.earlylife.NumbersActivity
+com.example.earlylife.OnClickListener <|.. com.example.earlylife.StatisticsFragment
+androidx.fragment.app.Fragment <|-- com.example.earlylife.StatisticsFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.example.earlylife.TabbedActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.earlylife.PieChartActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.earlylife.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.earlylife.BarChartActivity
+androidx.fragment.app.Fragment <|-- com.example.earlylife.HelpFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.example.earlylife.ShapesActivity
+androidx.viewpager2.adapter.FragmentStateAdapter <|-- com.example.earlylife.FragmentAdapter
+androidx.appcompat.app.AppCompatActivity <|-- com.example.earlylife.LoveActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.earlylife.MiscActivity
+@enduml

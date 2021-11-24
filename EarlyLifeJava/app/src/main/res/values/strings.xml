@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EarlyLifeJava</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="activities_tab_label">ACTIVITIES</string>
+    <string name="help_tab_label">HELP</string>
+    <string name="statistics_tab_label">Statistics</string>
+    <string name="generate_npie_nchart">Generate \nPie \nChart</string>
+    <string name="generate_nbar_nchart">Generate \nBar \nChart</string>
+    <string name="generate_nradar_nchart">Generate \nRadar \nChart</string>
+</resources>
